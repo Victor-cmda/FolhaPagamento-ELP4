@@ -1,5 +1,6 @@
 ﻿using System;
 using WinFormsFolhaDePagamento.Modelos;
+using WinFormsFolhaDePagamento.Modelos.Interface;
 
 namespace WinFormsFolhaDePagamento
 {
@@ -10,8 +11,6 @@ namespace WinFormsFolhaDePagamento
         public frmCadastroCidade()
         {
             InitializeComponent();
-            frmConsultaEstado = new frmConsultaEstado();
-
         }
 
         public override void ConhecaObj(object obj)
@@ -22,6 +21,11 @@ namespace WinFormsFolhaDePagamento
         private void btnPesquisarEstado_Click(object sender, EventArgs e)
         {
             frmConsultaEstado.ShowDialog();
+        }
+
+        public void SetConsultaEstado(object obj)
+        {
+            frmConsultaEstado = (frmConsultaEstado) obj;
         }
 
         public override void Salvar()

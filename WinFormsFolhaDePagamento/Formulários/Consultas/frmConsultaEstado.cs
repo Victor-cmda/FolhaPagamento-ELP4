@@ -9,7 +9,6 @@ namespace WinFormsFolhaDePagamento
         public frmConsultaEstado()
         {
             InitializeComponent();
-            frmCadastroEstado = new frmCadastroEstado();
 
         }
 
@@ -17,6 +16,8 @@ namespace WinFormsFolhaDePagamento
         {
             estado = (Estado)obj;
         }
+
+        
 
         public override void Inserir()
         {
@@ -30,6 +31,14 @@ namespace WinFormsFolhaDePagamento
             frmCadastroEstado.ConhecaObj(estado);
             frmCadastroEstado.Carregar();
             frmCadastroEstado.ShowDialog();
+        }
+
+        public override void SetFrmCadastro(object obj)
+        {
+            if (obj != null)
+            {
+                frmCadastroEstado = (frmCadastroEstado)obj;
+            }
         }
     }
 }

@@ -115,7 +115,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNomeCidade);
             this.Name = "frmCadastroCidade";
-            this.Text = "y";
+            this.Text = "Formulário de Cadastro de Cidades";
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.txtBase, 0);
             this.Controls.SetChildIndex(this.lblBase, 0);

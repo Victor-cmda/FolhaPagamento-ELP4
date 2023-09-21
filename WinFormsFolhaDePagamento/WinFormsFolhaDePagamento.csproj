@@ -135,6 +135,7 @@
     <Compile Include="Modelos\Empresa.cs" />
     <Compile Include="Modelos\Estado.cs" />
     <Compile Include="Modelos\Funcionario.cs" />
+    <Compile Include="Modelos\Interface\Interfaces.cs" />
     <Compile Include="Modelos\Pais.cs" />
     <Compile Include="Modelos\Pessoa.cs" />
     <Compile Include="Program.cs" />

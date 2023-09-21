@@ -9,13 +9,12 @@ namespace WinFormsFolhaDePagamento
         public frmConsultaPais()
         {
             InitializeComponent();
-            frmCadastroPais = new frmCadastroPais();
         }
 
         public override void ConhecaObj(object obj)
         {
             pais = (Pais)obj;
-        }   
+        }
 
         public override void Inserir()
         {
@@ -29,6 +28,14 @@ namespace WinFormsFolhaDePagamento
             frmCadastroPais.ConhecaObj(pais);
             frmCadastroPais.Carregar();
             frmCadastroPais.ShowDialog();
+        }
+
+        public override void SetFrmCadastro(object obj)
+        {
+            if (obj != null)
+            {
+                frmCadastroPais = (frmCadastroPais)obj;
+            }
         }
     }
 }

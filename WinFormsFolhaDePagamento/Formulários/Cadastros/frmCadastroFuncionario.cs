@@ -10,8 +10,6 @@ namespace WinFormsFolhaDePagamento
         public frmCadastroFuncionario()
         {
             InitializeComponent();
-            frmConsultaCidade = new frmConsultaCidade();
-
         }
 
         public override void ConhecaObj(object obj)
@@ -22,6 +20,11 @@ namespace WinFormsFolhaDePagamento
         private void btnPesquisarCidadeFuncionario_Click(object sender, EventArgs e)
         {
             frmConsultaCidade.ShowDialog();
+        }
+
+        public void SetConsultaCidade(object obj)
+        {
+            frmConsultaCidade = (frmConsultaCidade)obj;
         }
 
         public override void Salvar()

@@ -33,6 +33,11 @@ namespace WinFormsFolhaDePagamento
 
         }
 
+        public virtual void SetFrmCadastro(object obj)
+        {
+
+        }
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             Pesquisar();

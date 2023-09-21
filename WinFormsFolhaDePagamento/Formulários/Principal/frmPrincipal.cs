@@ -1,51 +1,51 @@
 ﻿using System;
 using System.Windows.Forms;
 using WinFormsFolhaDePagamento.Modelos;
+using WinFormsFolhaDePagamento.Modelos.Interface;
 
 namespace WinFormsFolhaDePagamento
 {
     public partial class frmPrincipal : Form
     {
-        Empresa empresa = new Empresa();
+        private Interfaces aInter;
+
+        Empresa empresa;
+        Funcionario funcionario;
+        Pais pais;
+        Estado estado;
+        Cidade cidade;
 
         public frmPrincipal()
         {
             InitializeComponent();
-            empresa.Id = 1;
-            empresa.RazaoSocial = "Empresa 1";
-            empresa.Cnpj = "123456789";
-            empresa.NumFuncionarios = 10;
+            aInter = new Interfaces();
+
+            empresa = new Empresa();
         }
 
         private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaEmpresa frm = new frmConsultaEmpresa();
-            frm.ConhecaObj(empresa);
-            frm.ShowDialog();
+            aInter.ModalConsultaEmpresas(empresa);
         }
 
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaFuncionario frm = new frmConsultaFuncionario();
-            frm.ShowDialog();
+            aInter.ModalConsultaFuncionarios(funcionario);
         }
 
         private void paísToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaPais frm = new frmConsultaPais();
-            frm.ShowDialog();
+            aInter.ModalConsultaPaises(pais);
         }
 
         private void estadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaEstado frm = new frmConsultaEstado();
-            frm.ShowDialog();
+            aInter.ModalConsultaEstados(estado);
         }
 
         private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaCidade frm = new frmConsultaCidade();
-            frm.ShowDialog();
+            aInter.ModalConsultaCidades(cidade);
         }
     }
 }

@@ -10,8 +10,6 @@ namespace WinFormsFolhaDePagamento
         public frmCadastroEstado()
         {
             InitializeComponent();
-            frmConsultaPais = new frmConsultaPais();
-
         }
 
         public override void ConhecaObj(object obj)
@@ -24,12 +22,17 @@ namespace WinFormsFolhaDePagamento
             base.Salvar();
             estado.Nome = txtNomeEstado.Text;
             estado.UF = txtUF.Text;
-            estado.Pais = (Pais)frmConsultaPais.Selecionado;
+            estado.Pais.Nome = txtPais.Text;
         }
 
         private void btnPesquisarPais_Click(object sender, EventArgs e)
         {
             frmConsultaPais.ShowDialog();
+        }
+
+        public void SetConsultaPais(object obj)
+        {
+            frmConsultaPais = (frmConsultaPais)obj;
         }
 
         public override void Limpar()

@@ -9,7 +9,6 @@ namespace WinFormsFolhaDePagamento
         public frmConsultaCidade()
         {
             InitializeComponent();
-            frmCadastroCidade = new frmCadastroCidade();
         }
 
         public override void ConhecaObj(object obj)
@@ -20,15 +19,23 @@ namespace WinFormsFolhaDePagamento
         public override void Inserir()
         {
             base.Inserir();
-            this.frmCadastroCidade.ShowDialog();
+            frmCadastroCidade.ShowDialog();
         }
 
         public override void Alterar()
         {
             base.Alterar();
-            this.frmCadastroCidade.ConhecaObj(cidade);
-            this.frmCadastroCidade.Carregar();
-            this.frmCadastroCidade.ShowDialog();
+            frmCadastroCidade.ConhecaObj(cidade);
+            frmCadastroCidade.Carregar();
+            frmCadastroCidade.ShowDialog();
+        }
+
+        public override void SetFrmCadastro(object obj)
+        {
+            if (obj != null)
+            {
+                frmCadastroCidade = (frmCadastroCidade)obj;
+            }
         }
     }
 }

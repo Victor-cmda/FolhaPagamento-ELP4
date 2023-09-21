@@ -9,8 +9,6 @@ namespace WinFormsFolhaDePagamento
         public frmConsultaEmpresa()
         {
             InitializeComponent();
-            frmCadastroEmpresa = new frmCadastroEmpresa();
-
         }
 
         public override void ConhecaObj(object obj)
@@ -30,6 +28,13 @@ namespace WinFormsFolhaDePagamento
             frmCadastroEmpresa.ConhecaObj(empresa);
             frmCadastroEmpresa.Carregar();
             frmCadastroEmpresa.ShowDialog();
+        }
+        public override void SetFrmCadastro(object obj)
+        {
+            if (obj != null)
+            {
+                frmCadastroEmpresa = (frmCadastroEmpresa)obj;
+            }
         }
     }
 }

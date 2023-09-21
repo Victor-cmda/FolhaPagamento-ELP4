@@ -30,6 +30,10 @@
         {
             this.SuspendLayout();
             // 
+            // listViewOfConsulta
+            // 
+            this.listViewOfConsulta.Location = new System.Drawing.Point(12, 92);
+            // 
             // lblTitleBase
             // 
             this.lblTitleBase.Size = new System.Drawing.Size(260, 31);
