@@ -28,12 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.nomeEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cnpjEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nrFuncEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
+            // 
+            // listViewOfConsulta
+            // 
+            this.listViewOfConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nomeEmpresa,
+            this.cnpjEmpresa,
+            this.nrFuncEmpresa});
             // 
             // lblTitleBase
             // 
             this.lblTitleBase.Size = new System.Drawing.Size(277, 31);
             this.lblTitleBase.Text = "Consulta de Empresa";
+            // 
+            // nomeEmpresa
+            // 
+            this.nomeEmpresa.Text = "Empresa";
+            this.nomeEmpresa.Width = 200;
+            // 
+            // cnpjEmpresa
+            // 
+            this.cnpjEmpresa.Text = "CNPJ";
+            this.cnpjEmpresa.Width = 200;
+            // 
+            // nrFuncEmpresa
+            // 
+            this.nrFuncEmpresa.Text = "Qtd. Funcionários";
+            this.nrFuncEmpresa.Width = 100;
             // 
             // frmConsultaEmpresa
             // 
@@ -47,5 +72,9 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColumnHeader nomeEmpresa;
+        private System.Windows.Forms.ColumnHeader cnpjEmpresa;
+        private System.Windows.Forms.ColumnHeader nrFuncEmpresa;
     }
 }

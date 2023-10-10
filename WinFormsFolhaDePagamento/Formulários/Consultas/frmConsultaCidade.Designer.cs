@@ -28,16 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.nomeCidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DDDCidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nomeEstadoCidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listViewOfConsulta
             // 
+            this.listViewOfConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nomeCidade,
+            this.DDDCidade,
+            this.nomeEstadoCidade});
             this.listViewOfConsulta.Location = new System.Drawing.Point(12, 92);
             // 
             // lblTitleBase
             // 
             this.lblTitleBase.Size = new System.Drawing.Size(260, 31);
             this.lblTitleBase.Text = "Consulta de Cidade";
+            // 
+            // nomeCidade
+            // 
+            this.nomeCidade.Text = "Cidade";
+            this.nomeCidade.Width = 200;
+            // 
+            // DDDCidade
+            // 
+            this.DDDCidade.Text = "DDD";
+            // 
+            // nomeEstadoCidade
+            // 
+            this.nomeEstadoCidade.Text = "Estado";
+            this.nomeEstadoCidade.Width = 200;
             // 
             // frmConsultaCidade
             // 
@@ -51,5 +72,9 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColumnHeader nomeCidade;
+        private System.Windows.Forms.ColumnHeader DDDCidade;
+        private System.Windows.Forms.ColumnHeader nomeEstadoCidade;
     }
 }

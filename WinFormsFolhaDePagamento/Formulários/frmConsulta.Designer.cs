@@ -33,6 +33,7 @@
             this.btnIncluir = new System.Windows.Forms.Button();
             this.listViewOfConsulta = new System.Windows.Forms.ListView();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblBase
@@ -72,12 +73,17 @@
             // 
             // listViewOfConsulta
             // 
+            this.listViewOfConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.cod});
+            this.listViewOfConsulta.FullRowSelect = true;
+            this.listViewOfConsulta.GridLines = true;
             this.listViewOfConsulta.HideSelection = false;
             this.listViewOfConsulta.Location = new System.Drawing.Point(12, 91);
             this.listViewOfConsulta.Name = "listViewOfConsulta";
             this.listViewOfConsulta.Size = new System.Drawing.Size(776, 318);
             this.listViewOfConsulta.TabIndex = 8;
             this.listViewOfConsulta.UseCompatibleStateImageBehavior = false;
+            this.listViewOfConsulta.View = System.Windows.Forms.View.Details;
             // 
             // btnPesquisar
             // 
@@ -88,6 +94,10 @@
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // cod
+            // 
+            this.cod.Text = "Código";
             // 
             // frmConsulta
             // 
@@ -121,5 +131,6 @@
         protected System.Windows.Forms.Button btnIncluir;
         protected System.Windows.Forms.ListView listViewOfConsulta;
         protected System.Windows.Forms.Button btnPesquisar;
+        protected System.Windows.Forms.ColumnHeader cod;
     }
 }

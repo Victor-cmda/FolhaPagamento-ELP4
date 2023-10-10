@@ -7,10 +7,12 @@ namespace WinFormsFolhaDePagamento
     public partial class frmCadastroCidade : WinFormsFolhaDePagamento.frmCadastro
     {
         frmConsultaEstado frmConsultaEstado;
-        Cidade cidade;
+        Cidade cidade = new Cidade();
+        
         public frmCadastroCidade()
         {
             InitializeComponent();
+            cidade.Estado = new Estado();
         }
 
         public override void ConhecaObj(object obj)
@@ -31,6 +33,7 @@ namespace WinFormsFolhaDePagamento
         public override void Salvar()
         {
             base.Salvar();
+            //cidade.Id = int.Parse(txtBase.Text);
             cidade.Nome = txtNomeCidade.Text;
             cidade.Estado.Nome = txtEstado.Text;
             cidade.DDD = txtDDD.Text;
@@ -47,6 +50,7 @@ namespace WinFormsFolhaDePagamento
         public override void Carregar()
         {
             base.Carregar();
+            txtBase.Text = cidade.Id.ToString();
             txtNomeCidade.Text = cidade.Nome;
             txtEstado.Text = cidade.Estado.Nome;
             txtDDD.Text = cidade.DDD;
@@ -55,6 +59,7 @@ namespace WinFormsFolhaDePagamento
         public override void Bloquear()
         {
             base.Bloquear();
+            txtBase.Enabled = false;
             txtNomeCidade.Enabled = false;
             txtEstado.Enabled = false;
             txtDDD.Enabled = false;
@@ -63,6 +68,7 @@ namespace WinFormsFolhaDePagamento
         public override void Desbloquear()
         {
             base.Desbloquear();
+            txtBase.Enabled = true;
             txtNomeCidade.Enabled = true;
             txtEstado.Enabled = true;
             txtDDD.Enabled = true;
