@@ -28,6 +28,11 @@ namespace WinFormsFolhaDePagamento
 
         }
 
+        public virtual void CarregaListView()
+        {
+
+        }
+
         public override void ConhecaObj(object obj)
         {
 
@@ -56,6 +61,11 @@ namespace WinFormsFolhaDePagamento
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             Excluir();
+        }
+
+        private void frmConsulta_Load(object sender, EventArgs e)
+        {
+            CarregaListView();
         }
     }
 }

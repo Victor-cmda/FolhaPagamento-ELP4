@@ -5,6 +5,6 @@
         public string Nome;
         public string Sexo;
         public int Idade;
-        public Cidade cidade;
+        public Cidade Cidade;
     }
 }

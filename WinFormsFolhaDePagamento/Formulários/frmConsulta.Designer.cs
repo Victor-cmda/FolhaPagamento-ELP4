@@ -32,8 +32,8 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.listViewOfConsulta = new System.Windows.Forms.ListView();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.cod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblBase
@@ -85,6 +85,10 @@
             this.listViewOfConsulta.UseCompatibleStateImageBehavior = false;
             this.listViewOfConsulta.View = System.Windows.Forms.View.Details;
             // 
+            // cod
+            // 
+            this.cod.Text = "Código";
+            // 
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(118, 63);
@@ -94,10 +98,6 @@
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // cod
-            // 
-            this.cod.Text = "Código";
             // 
             // frmConsulta
             // 
@@ -110,6 +110,7 @@
             this.Controls.Add(this.btnExcluir);
             this.Name = "frmConsulta";
             this.Text = "Formulário de Consulta";
+            this.Load += new System.EventHandler(this.frmConsulta_Load);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.txtBase, 0);
             this.Controls.SetChildIndex(this.lblBase, 0);

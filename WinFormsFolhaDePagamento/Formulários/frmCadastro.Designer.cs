@@ -33,6 +33,7 @@
             // 
             // txtBase
             // 
+            this.txtBase.Enabled = false;
             this.txtBase.Text = "0";
             // 
             // lblTitleBase

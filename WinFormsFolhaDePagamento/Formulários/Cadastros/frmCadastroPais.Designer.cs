@@ -44,6 +44,7 @@
             // txtNomePais
             // 
             this.txtNomePais.Location = new System.Drawing.Point(118, 65);
+            this.txtNomePais.MaxLength = 100;
             this.txtNomePais.Name = "txtNomePais";
             this.txtNomePais.Size = new System.Drawing.Size(165, 20);
             this.txtNomePais.TabIndex = 6;
@@ -71,6 +72,7 @@
             // txtSiglaPais
             // 
             this.txtSiglaPais.Location = new System.Drawing.Point(289, 65);
+            this.txtSiglaPais.MaxLength = 3;
             this.txtSiglaPais.Name = "txtSiglaPais";
             this.txtSiglaPais.Size = new System.Drawing.Size(35, 20);
             this.txtSiglaPais.TabIndex = 8;
@@ -88,6 +90,7 @@
             // txtMoeda
             // 
             this.txtMoeda.Location = new System.Drawing.Point(330, 65);
+            this.txtMoeda.MaxLength = 4;
             this.txtMoeda.Name = "txtMoeda";
             this.txtMoeda.Size = new System.Drawing.Size(100, 20);
             this.txtMoeda.TabIndex = 10;

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace WinFormsFolhaDePagamento
 {
@@ -42,6 +44,15 @@ namespace WinFormsFolhaDePagamento
         public virtual void Desbloquear()
         {
             this.txtBase.Enabled = true;
+        }
+
+        public virtual void MostrarErro(Control control, string mensagem)
+        {
+            control.BackColor = Color.LightPink;
+
+            MessageBox.Show(mensagem);
+
+            control.Focus();
         }
     }
 }
