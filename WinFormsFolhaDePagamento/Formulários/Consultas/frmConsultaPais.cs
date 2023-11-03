@@ -131,6 +131,33 @@ namespace WinFormsFolhaDePagamento
             CarregaListView();
         }
 
+        public void Selecionar(bool aux)
+        {
+            if (aux)
+            {
+                btnSair.Text = "Selecionar";
+            }
+            else
+            {
+                btnSair.Text = "Sair";
+            }
+        }
+
+        public override void Sair()
+        {
+            if (btnSair.Text == "Selecionar")
+            {
+                var PaisSelecionado = listViewOfConsulta.SelectedItems[0];
+
+                pais.Id = int.Parse(PaisSelecionado.SubItems[0].Text);
+                pais.Nome= PaisSelecionado.SubItems[1].Text;
+                pais.Sigla= PaisSelecionado.SubItems[2].Text;
+                pais.Moeda= PaisSelecionado.SubItems[3].Text;
+            }
+
+            base.Sair();
+        }
+
         public override void SetFrmCadastro(object obj)
         {
             if (obj != null)

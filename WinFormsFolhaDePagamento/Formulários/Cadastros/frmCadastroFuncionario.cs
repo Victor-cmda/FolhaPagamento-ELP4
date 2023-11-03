@@ -32,7 +32,7 @@ namespace WinFormsFolhaDePagamento
             base.Salvar();
             funcionario.Nome = txtNomeFuncionario.Text;
             funcionario.Idade = Convert.ToInt32(txtIdade.Text);
-            funcionario.cidade.Nome = txtCidadeFuncionario.Text;
+            funcionario.Cidade.Nome = txtCidadeFuncionario.Text;
             funcionario.Matricula = Convert.ToInt32(txtMatricula.Text);
             funcionario.NumDep = Convert.ToInt32(txtNumDepartamento.Text);
             funcionario.SalarioBase = Convert.ToDouble(txtSalarioFuncionario.Text);
@@ -76,7 +76,7 @@ namespace WinFormsFolhaDePagamento
             txtBase.Text = funcionario.Id.ToString();
             txtNomeFuncionario.Text = funcionario.Nome;
             txtIdade.Text = funcionario.Idade.ToString();
-            txtCidadeFuncionario.Text = funcionario.cidade.Nome;
+            txtCidadeFuncionario.Text = funcionario.Cidade.Nome;
             txtMatricula.Text = funcionario.Matricula.ToString();
             txtNumDepartamento.Text = funcionario.NumDep.ToString();
             txtSalarioFuncionario.Text = funcionario.SalarioBase.ToString();
