@@ -150,12 +150,51 @@ namespace WinFormsFolhaDePagamento
                 var PaisSelecionado = listViewOfConsulta.SelectedItems[0];
 
                 pais.Id = int.Parse(PaisSelecionado.SubItems[0].Text);
-                pais.Nome= PaisSelecionado.SubItems[1].Text;
-                pais.Sigla= PaisSelecionado.SubItems[2].Text;
-                pais.Moeda= PaisSelecionado.SubItems[3].Text;
+                pais.Nome = PaisSelecionado.SubItems[1].Text;
+                pais.Sigla = PaisSelecionado.SubItems[2].Text;
+                pais.Moeda = PaisSelecionado.SubItems[3].Text;
             }
 
             base.Sair();
+        }
+
+        public override void Pesquisar()
+        {
+            listViewOfConsulta.Items.Clear();
+            var filter = txtBase.Text;
+            string query;
+            if (!string.IsNullOrEmpty(filter))
+            {
+                if (int.TryParse(filter, out int id))
+                {
+                    query = $"SELECT * FROM Pais WHERE Id = {id}";
+                }
+                else
+                {
+                    query = $"SELECT * FROM Pais WHERE Nome like '%{filter}%' OR Sigla like '%{filter}%' OR Moeda like '%{filter}%'";
+                }
+                List<Pais> paises = Banco.SelectAll(query, ConvertToPais);
+
+                foreach (var pais in paises)
+                {
+                    ListViewItem item = new ListViewItem(pais.Id.ToString());
+
+                    item.SubItems.Add(pais.Nome);
+                    item.SubItems.Add(pais.Sigla);
+                    item.SubItems.Add(pais.Moeda);
+
+                    listViewOfConsulta.Tag = pais;
+
+                    listViewOfConsulta.Items.Add(item);
+                }
+
+                base.CarregaListView();
+                base.Pesquisar();
+            }
+            else
+            {
+                CarregaListView();
+            }
         }
 
         public override void SetFrmCadastro(object obj)

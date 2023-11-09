@@ -9,7 +9,8 @@ namespace WinFormsFolhaDePagamento.Modelos.Banco
     {
         public static SqlConnection Open()
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victo\OneDrive\Documentos\Faculdade\ELP4FolhaPagamento\FolhaPagamento-ELP4\WinFormsFolhaDePagamento\Database\DatabaseFolhaPagamento.mdf;Integrated Security=True";
+            //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victo\OneDrive\Documentos\Faculdade\ELP4FolhaPagamento\FolhaPagamento-ELP4\WinFormsFolhaDePagamento\Database\DatabaseFolhaPagamento.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victo\source\repos\WinFormsFolhaDePagamento\WinFormsFolhaDePagamento\Database\DatabaseFolhaPagamento.mdf;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
             return connection;
